@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E421CC361934E377002E2A3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC351934E377002E2A3F /* Foundation.framework */; };
+		E421CC381934E377002E2A3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC371934E377002E2A3F /* CoreGraphics.framework */; };
+		E421CC3A1934E377002E2A3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC391934E377002E2A3F /* UIKit.framework */; };
+		E421CC401934E377002E2A3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E421CC3E1934E377002E2A3F /* InfoPlist.strings */; };
+		E421CC421934E377002E2A3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC411934E377002E2A3F /* main.m */; };
+		E421CC461934E377002E2A3F /* ChristAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC451934E377002E2A3F /* ChristAppDelegate.m */; };
+		E421CC481934E377002E2A3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E421CC471934E377002E2A3F /* Images.xcassets */; };
+		E421CC4F1934E377002E2A3F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC4E1934E377002E2A3F /* XCTest.framework */; };
+		E421CC501934E377002E2A3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC351934E377002E2A3F /* Foundation.framework */; };
+		E421CC511934E377002E2A3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC391934E377002E2A3F /* UIKit.framework */; };
+		E421CC591934E377002E2A3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E421CC571934E377002E2A3F /* InfoPlist.strings */; };
+		E421CC5B1934E377002E2A3F /* BibleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC5A1934E377002E2A3F /* BibleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E421CC521934E377002E2A3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E421CC2A1934E377002E2A3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E421CC311934E377002E2A3F;
+			remoteInfo = Bible;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E421CC321934E377002E2A3F /* Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bible.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E421CC351934E377002E2A3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E421CC371934E377002E2A3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E421CC391934E377002E2A3F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E421CC3D1934E377002E2A3F /* Bible-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bible-Info.plist"; sourceTree = "<group>"; };
+		E421CC3F1934E377002E2A3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E421CC411934E377002E2A3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E421CC431934E377002E2A3F /* Bible-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bible-Prefix.pch"; sourceTree = "<group>"; };
+		E421CC441934E377002E2A3F /* ChristAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChristAppDelegate.h; sourceTree = "<group>"; };
+		E421CC451934E377002E2A3F /* ChristAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChristAppDelegate.m; sourceTree = "<group>"; };
+		E421CC471934E377002E2A3F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E421CC4D1934E377002E2A3F /* BibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E421CC4E1934E377002E2A3F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E421CC561934E377002E2A3F /* BibleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BibleTests-Info.plist"; sourceTree = "<group>"; };
+		E421CC581934E377002E2A3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E421CC5A1934E377002E2A3F /* BibleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BibleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E421CC2F1934E377002E2A3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E421CC381934E377002E2A3F /* CoreGraphics.framework in Frameworks */,
+				E421CC3A1934E377002E2A3F /* UIKit.framework in Frameworks */,
+				E421CC361934E377002E2A3F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E421CC4A1934E377002E2A3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E421CC4F1934E377002E2A3F /* XCTest.framework in Frameworks */,
+				E421CC511934E377002E2A3F /* UIKit.framework in Frameworks */,
+				E421CC501934E377002E2A3F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E421CC291934E377002E2A3F = {
+			isa = PBXGroup;
+			children = (
+				E421CC3B1934E377002E2A3F /* Bible */,
+				E421CC541934E377002E2A3F /* BibleTests */,
+				E421CC341934E377002E2A3F /* Frameworks */,
+				E421CC331934E377002E2A3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E421CC331934E377002E2A3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E421CC321934E377002E2A3F /* Bible.app */,
+				E421CC4D1934E377002E2A3F /* BibleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E421CC341934E377002E2A3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E421CC351934E377002E2A3F /* Foundation.framework */,
+				E421CC371934E377002E2A3F /* CoreGraphics.framework */,
+				E421CC391934E377002E2A3F /* UIKit.framework */,
+				E421CC4E1934E377002E2A3F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E421CC3B1934E377002E2A3F /* Bible */ = {
+			isa = PBXGroup;
+			children = (
+				E421CC441934E377002E2A3F /* ChristAppDelegate.h */,
+				E421CC451934E377002E2A3F /* ChristAppDelegate.m */,
+				E421CC471934E377002E2A3F /* Images.xcassets */,
+				E421CC3C1934E377002E2A3F /* Supporting Files */,
+			);
+			path = Bible;
+			sourceTree = "<group>";
+		};
+		E421CC3C1934E377002E2A3F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E421CC3D1934E377002E2A3F /* Bible-Info.plist */,
+				E421CC3E1934E377002E2A3F /* InfoPlist.strings */,
+				E421CC411934E377002E2A3F /* main.m */,
+				E421CC431934E377002E2A3F /* Bible-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E421CC541934E377002E2A3F /* BibleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E421CC5A1934E377002E2A3F /* BibleTests.m */,
+				E421CC551934E377002E2A3F /* Supporting Files */,
+			);
+			path = BibleTests;
+			sourceTree = "<group>";
+		};
+		E421CC551934E377002E2A3F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E421CC561934E377002E2A3F /* BibleTests-Info.plist */,
+				E421CC571934E377002E2A3F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E421CC311934E377002E2A3F /* Bible */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E421CC5E1934E377002E2A3F /* Build configuration list for PBXNativeTarget "Bible" */;
+			buildPhases = (
+				E421CC2E1934E377002E2A3F /* Sources */,
+				E421CC2F1934E377002E2A3F /* Frameworks */,
+				E421CC301934E377002E2A3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bible;
+			productName = Bible;
+			productReference = E421CC321934E377002E2A3F /* Bible.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E421CC4C1934E377002E2A3F /* BibleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E421CC611934E377002E2A3F /* Build configuration list for PBXNativeTarget "BibleTests" */;
+			buildPhases = (
+				E421CC491934E377002E2A3F /* Sources */,
+				E421CC4A1934E377002E2A3F /* Frameworks */,
+				E421CC4B1934E377002E2A3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E421CC531934E377002E2A3F /* PBXTargetDependency */,
+			);
+			name = BibleTests;
+			productName = BibleTests;
+			productReference = E421CC4D1934E377002E2A3F /* BibleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E421CC2A1934E377002E2A3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Christ;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = pquanshan;
+				TargetAttributes = {
+					E421CC4C1934E377002E2A3F = {
+						TestTargetID = E421CC311934E377002E2A3F;
+					};
+				};
+			};
+			buildConfigurationList = E421CC2D1934E377002E2A3F /* Build configuration list for PBXProject "Bible" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E421CC291934E377002E2A3F;
+			productRefGroup = E421CC331934E377002E2A3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E421CC311934E377002E2A3F /* Bible */,
+				E421CC4C1934E377002E2A3F /* BibleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E421CC301934E377002E2A3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E421CC401934E377002E2A3F /* InfoPlist.strings in Resources */,
+				E421CC481934E377002E2A3F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E421CC4B1934E377002E2A3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E421CC591934E377002E2A3F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E421CC2E1934E377002E2A3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E421CC421934E377002E2A3F /* main.m in Sources */,
+				E421CC461934E377002E2A3F /* ChristAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E421CC491934E377002E2A3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E421CC5B1934E377002E2A3F /* BibleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E421CC531934E377002E2A3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E421CC311934E377002E2A3F /* Bible */;
+			targetProxy = E421CC521934E377002E2A3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E421CC3E1934E377002E2A3F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E421CC3F1934E377002E2A3F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E421CC571934E377002E2A3F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E421CC581934E377002E2A3F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E421CC5C1934E377002E2A3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E421CC5D1934E377002E2A3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E421CC5F1934E377002E2A3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bible/Bible-Prefix.pch";
+				INFOPLIST_FILE = "Bible/Bible-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E421CC601934E377002E2A3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bible/Bible-Prefix.pch";
+				INFOPLIST_FILE = "Bible/Bible-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E421CC621934E377002E2A3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bible.app/Bible";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bible/Bible-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BibleTests/BibleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E421CC631934E377002E2A3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bible.app/Bible";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bible/Bible-Prefix.pch";
+				INFOPLIST_FILE = "BibleTests/BibleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E421CC2D1934E377002E2A3F /* Build configuration list for PBXProject "Bible" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E421CC5C1934E377002E2A3F /* Debug */,
+				E421CC5D1934E377002E2A3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E421CC5E1934E377002E2A3F /* Build configuration list for PBXNativeTarget "Bible" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E421CC5F1934E377002E2A3F /* Debug */,
+				E421CC601934E377002E2A3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E421CC611934E377002E2A3F /* Build configuration list for PBXNativeTarget "BibleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E421CC621934E377002E2A3F /* Debug */,
+				E421CC631934E377002E2A3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E421CC2A1934E377002E2A3F /* Project object */;
+}
