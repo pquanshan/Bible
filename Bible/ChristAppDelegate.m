@@ -6,16 +6,26 @@
 //  Copyright (c) 2014年 pquanshan. All rights reserved.
 //
 
+#import "ChristModel.h"
 #import "ChristAppDelegate.h"
 
 @implementation ChristAppDelegate
+@synthesize viewHome =_viewHome;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [ChristModel shareModel];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    _viewHome = [[ChristViewHome alloc] init];
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:_viewHome];
+    _viewHome.navigationController.navigationBarHidden = YES;
+
+    [self.window addSubview:_navigationController.view];
     return YES;
 }
 
