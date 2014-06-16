@@ -7,18 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE63442D1935D1E8003D287B /* ChristViewScripture.m in Sources */ = {isa = PBXBuildFile; fileRef = CE63442C1935D1E8003D287B /* ChristViewScripture.m */; };
+		CE6344301935E41A003D287B /* ChristViewNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = CE63442F1935E41A003D287B /* ChristViewNotes.m */; };
+		CE6344331935E43E003D287B /* ChristViewHighlighted.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6344321935E43E003D287B /* ChristViewHighlighted.m */; };
+		CE6344361935E473003D287B /* ChristViewPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6344351935E473003D287B /* ChristViewPlan.m */; };
+		CE6344391935E49E003D287B /* ChristViewSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6344381935E49E003D287B /* ChristViewSet.m */; };
+		CEA2C1F2194192BF00C68AD2 /* ChristBibleData.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2C1F1194192BF00C68AD2 /* ChristBibleData.m */; };
+		CEA4BC04193EBAF300F7745E /* ChristScriptureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA4BC03193EBAF300F7745E /* ChristScriptureCell.m */; };
+		CEA4BC07193EFAC700F7745E /* ChristViewDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA4BC06193EFAC700F7745E /* ChristViewDirectory.m */; };
+		CEAEA28B193D77310054BF91 /* ChristEpub.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAEA28A193D77310054BF91 /* ChristEpub.m */; };
+		CEAEA28E193D77770054BF91 /* ChristChapterEpub.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAEA28D193D77770054BF91 /* ChristChapterEpub.m */; };
 		E421CC361934E377002E2A3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC351934E377002E2A3F /* Foundation.framework */; };
 		E421CC381934E377002E2A3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC371934E377002E2A3F /* CoreGraphics.framework */; };
 		E421CC3A1934E377002E2A3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC391934E377002E2A3F /* UIKit.framework */; };
 		E421CC401934E377002E2A3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E421CC3E1934E377002E2A3F /* InfoPlist.strings */; };
 		E421CC421934E377002E2A3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC411934E377002E2A3F /* main.m */; };
 		E421CC461934E377002E2A3F /* ChristAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC451934E377002E2A3F /* ChristAppDelegate.m */; };
-		E421CC481934E377002E2A3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E421CC471934E377002E2A3F /* Images.xcassets */; };
 		E421CC4F1934E377002E2A3F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC4E1934E377002E2A3F /* XCTest.framework */; };
 		E421CC501934E377002E2A3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC351934E377002E2A3F /* Foundation.framework */; };
 		E421CC511934E377002E2A3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E421CC391934E377002E2A3F /* UIKit.framework */; };
 		E421CC591934E377002E2A3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E421CC571934E377002E2A3F /* InfoPlist.strings */; };
 		E421CC5B1934E377002E2A3F /* BibleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC5A1934E377002E2A3F /* BibleTests.m */; };
+		E421CC6F1934E3BF002E2A3F /* ChristViewMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC6A1934E3BF002E2A3F /* ChristViewMenu.m */; };
+		E421CC701934E3BF002E2A3F /* ChristViewShowDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC6C1934E3BF002E2A3F /* ChristViewShowDetails.m */; };
+		E421CC731934E4FA002E2A3F /* ChristViewHome.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC721934E4FA002E2A3F /* ChristViewHome.m */; };
+		E421CC771934ED3F002E2A3F /* ChristUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC761934ED3F002E2A3F /* ChristUtils.m */; };
+		E498428519361CAD003B9A05 /* ChristViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E498428419361CAD003B9A05 /* ChristViewFactory.m */; };
+		E49CB3AC193CC95400C3A5D1 /* ChristChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB3AB193CC95400C3A5D1 /* ChristChapter.m */; };
+		E49CB3B4193CCD4B00C3A5D1 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB3B1193CCD4B00C3A5D1 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E49CB3B5193CCD4B00C3A5D1 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB3B3193CCD4B00C3A5D1 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4A31DDE1945CFA3000E91F7 /* ChristViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A31DDD1945CFA3000E91F7 /* ChristViewBase.m */; };
+		E4A31DE41945F5B7000E91F7 /* next_chapter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A31DE01945F5B7000E91F7 /* next_chapter@2x.png */; };
+		E4A31DE61945F5B7000E91F7 /* prev_chapter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A31DE21945F5B7000E91F7 /* prev_chapter@2x.png */; };
+		E4A31DEA1946041F000E91F7 /* next_chapter_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A31DE81946041F000E91F7 /* next_chapter_on@2x.png */; };
+		E4A31DEB1946041F000E91F7 /* prev_chapter_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A31DE91946041F000E91F7 /* prev_chapter_on@2x.png */; };
+		E4A612F1193CC182005786E4 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = E4A612E7193CC182005786E4 /* ioapi.c */; };
+		E4A612F2193CC182005786E4 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = E4A612E9193CC182005786E4 /* mztools.c */; };
+		E4A612F3193CC182005786E4 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = E4A612EB193CC182005786E4 /* unzip.c */; };
+		E4A612F4193CC182005786E4 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = E4A612ED193CC182005786E4 /* zip.c */; };
+		E4A612F5193CC182005786E4 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4A612F0193CC182005786E4 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4A612F6193CC472005786E4 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BE4356193B475E005A6363 /* libz.1.1.3.dylib */; };
+		E4A612F7193CC47C005786E4 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BE4358193B476C005A6363 /* libz.1.2.5.dylib */; };
+		E4A9CAB919420A530081CE3F /* christbible_note_data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4A9CAB719420A530081CE3F /* christbible_note_data.xcdatamodeld */; };
+		E4A9CABC19420B670081CE3F /* ChristManagedCoreDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A9CABB19420B670081CE3F /* ChristManagedCoreDate.m */; };
+		E4A9CABE19420BAE0081CE3F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A9CABD19420BAE0081CE3F /* CoreData.framework */; };
+		E4A9CAC4194211790081CE3F /* ChristManagedNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A9CAC3194211790081CE3F /* ChristManagedNotes.m */; };
+		E4A9CAC719421FC30081CE3F /* ChristViewSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A9CAC619421FC30081CE3F /* ChristViewSearch.m */; };
+		E4AF69B2193780B9001F6844 /* ChristTextEditBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AF69B1193780B9001F6844 /* ChristTextEditBar.m */; };
+		E4AF849019409F9600438AEE /* ChristModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4AF848F19409F9600438AEE /* ChristModel.m */; };
+		E4B253D51942C42C007AD771 /* ChristViewNotesEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B253D41942C42C007AD771 /* ChristViewNotesEditor.m */; };
+		E4B253D81943187C007AD771 /* ChristNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B253D71943187C007AD771 /* ChristNotes.m */; };
+		E4BE4326193B4552005A6363 /* biblebook.epub in Resources */ = {isa = PBXBuildFile; fileRef = E4BE4323193B4552005A6363 /* biblebook.epub */; };
+		E4BE4327193B4552005A6363 /* biblebook_ce.epub in Resources */ = {isa = PBXBuildFile; fileRef = E4BE4324193B4552005A6363 /* biblebook_ce.epub */; };
+		E4BE4328193B4552005A6363 /* christ.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4BE4325193B4552005A6363 /* christ.plist */; };
+		E4BE4347193B45FC005A6363 /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE432C193B45FC005A6363 /* CXMLDocument_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE4348193B45FC005A6363 /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE432E193B45FC005A6363 /* CXMLNode_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE4349193B45FC005A6363 /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE4330193B45FC005A6363 /* CXHTMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE434A193B45FC005A6363 /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE4332193B45FC005A6363 /* CXMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE434B193B45FC005A6363 /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE4334193B45FC005A6363 /* CXMLDocument_PrivateExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE434C193B45FC005A6363 /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE4336193B45FC005A6363 /* CXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE434D193B45FC005A6363 /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE4338193B45FC005A6363 /* CXMLElement_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE434E193B45FC005A6363 /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE433A193B45FC005A6363 /* CXMLElement_ElementTreeExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE434F193B45FC005A6363 /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE433C193B45FC005A6363 /* CXMLNamespaceNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE4350193B45FC005A6363 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE433E193B45FC005A6363 /* CXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE4351193B45FC005A6363 /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE4340193B45FC005A6363 /* CXMLNode_PrivateExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE4352193B45FC005A6363 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE4342193B45FC005A6363 /* CXMLNode_XPathExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4BE4353193B45FC005A6363 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BE4345193B45FC005A6363 /* CTidy.m */; };
+		E4BE4355193B471D005A6363 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BE4354193B471D005A6363 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +87,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE63442B1935D1E8003D287B /* ChristViewScripture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewScripture.h; sourceTree = "<group>"; };
+		CE63442C1935D1E8003D287B /* ChristViewScripture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewScripture.m; sourceTree = "<group>"; };
+		CE63442E1935E41A003D287B /* ChristViewNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewNotes.h; sourceTree = "<group>"; };
+		CE63442F1935E41A003D287B /* ChristViewNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewNotes.m; sourceTree = "<group>"; };
+		CE6344311935E43E003D287B /* ChristViewHighlighted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewHighlighted.h; sourceTree = "<group>"; };
+		CE6344321935E43E003D287B /* ChristViewHighlighted.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewHighlighted.m; sourceTree = "<group>"; };
+		CE6344341935E473003D287B /* ChristViewPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewPlan.h; sourceTree = "<group>"; };
+		CE6344351935E473003D287B /* ChristViewPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewPlan.m; sourceTree = "<group>"; };
+		CE6344371935E49E003D287B /* ChristViewSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewSet.h; sourceTree = "<group>"; };
+		CE6344381935E49E003D287B /* ChristViewSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewSet.m; sourceTree = "<group>"; };
+		CE63443C1935F3D9003D287B /* ChristConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChristConfig.h; path = ../ChristConfig.h; sourceTree = "<group>"; };
+		CEA2C1F0194192BF00C68AD2 /* ChristBibleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristBibleData.h; sourceTree = "<group>"; };
+		CEA2C1F1194192BF00C68AD2 /* ChristBibleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristBibleData.m; sourceTree = "<group>"; };
+		CEA4BC02193EBAF300F7745E /* ChristScriptureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristScriptureCell.h; sourceTree = "<group>"; };
+		CEA4BC03193EBAF300F7745E /* ChristScriptureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristScriptureCell.m; sourceTree = "<group>"; };
+		CEA4BC05193EFAC700F7745E /* ChristViewDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewDirectory.h; sourceTree = "<group>"; };
+		CEA4BC06193EFAC700F7745E /* ChristViewDirectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewDirectory.m; sourceTree = "<group>"; };
+		CEAEA289193D77310054BF91 /* ChristEpub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristEpub.h; sourceTree = "<group>"; };
+		CEAEA28A193D77310054BF91 /* ChristEpub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristEpub.m; sourceTree = "<group>"; };
+		CEAEA28C193D77770054BF91 /* ChristChapterEpub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristChapterEpub.h; sourceTree = "<group>"; };
+		CEAEA28D193D77770054BF91 /* ChristChapterEpub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristChapterEpub.m; sourceTree = "<group>"; };
 		E421CC321934E377002E2A3F /* Bible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E421CC351934E377002E2A3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E421CC371934E377002E2A3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -42,12 +118,94 @@
 		E421CC431934E377002E2A3F /* Bible-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bible-Prefix.pch"; sourceTree = "<group>"; };
 		E421CC441934E377002E2A3F /* ChristAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChristAppDelegate.h; sourceTree = "<group>"; };
 		E421CC451934E377002E2A3F /* ChristAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChristAppDelegate.m; sourceTree = "<group>"; };
-		E421CC471934E377002E2A3F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E421CC4D1934E377002E2A3F /* BibleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E421CC4E1934E377002E2A3F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E421CC561934E377002E2A3F /* BibleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BibleTests-Info.plist"; sourceTree = "<group>"; };
 		E421CC581934E377002E2A3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E421CC5A1934E377002E2A3F /* BibleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BibleTests.m; sourceTree = "<group>"; };
+		E421CC691934E3BF002E2A3F /* ChristViewMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewMenu.h; sourceTree = "<group>"; };
+		E421CC6A1934E3BF002E2A3F /* ChristViewMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewMenu.m; sourceTree = "<group>"; };
+		E421CC6B1934E3BF002E2A3F /* ChristViewShowDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewShowDetails.h; sourceTree = "<group>"; };
+		E421CC6C1934E3BF002E2A3F /* ChristViewShowDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewShowDetails.m; sourceTree = "<group>"; };
+		E421CC711934E4FA002E2A3F /* ChristViewHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChristViewHome.h; path = ../View/ChristViewHome.h; sourceTree = "<group>"; };
+		E421CC721934E4FA002E2A3F /* ChristViewHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChristViewHome.m; path = ../View/ChristViewHome.m; sourceTree = "<group>"; };
+		E421CC751934ED3F002E2A3F /* ChristUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristUtils.h; sourceTree = "<group>"; };
+		E421CC761934ED3F002E2A3F /* ChristUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristUtils.m; sourceTree = "<group>"; };
+		E498428319361CAD003B9A05 /* ChristViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewFactory.h; sourceTree = "<group>"; };
+		E498428419361CAD003B9A05 /* ChristViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewFactory.m; sourceTree = "<group>"; };
+		E49CB3AA193CC95400C3A5D1 /* ChristChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristChapter.h; sourceTree = "<group>"; };
+		E49CB3AB193CC95400C3A5D1 /* ChristChapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristChapter.m; sourceTree = "<group>"; };
+		E49CB3B0193CCD4B00C3A5D1 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		E49CB3B1193CCD4B00C3A5D1 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		E49CB3B2193CCD4B00C3A5D1 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		E49CB3B3193CCD4B00C3A5D1 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		E49CB3B6193CCDB700C3A5D1 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		E4A31DDC1945CFA3000E91F7 /* ChristViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewBase.h; sourceTree = "<group>"; };
+		E4A31DDD1945CFA3000E91F7 /* ChristViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewBase.m; sourceTree = "<group>"; };
+		E4A31DE01945F5B7000E91F7 /* next_chapter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next_chapter@2x.png"; sourceTree = "<group>"; };
+		E4A31DE21945F5B7000E91F7 /* prev_chapter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prev_chapter@2x.png"; sourceTree = "<group>"; };
+		E4A31DE81946041F000E91F7 /* next_chapter_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next_chapter_on@2x.png"; sourceTree = "<group>"; };
+		E4A31DE91946041F000E91F7 /* prev_chapter_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prev_chapter_on@2x.png"; sourceTree = "<group>"; };
+		E4A612E6193CC182005786E4 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		E4A612E7193CC182005786E4 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		E4A612E8193CC182005786E4 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		E4A612E9193CC182005786E4 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		E4A612EA193CC182005786E4 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		E4A612EB193CC182005786E4 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		E4A612EC193CC182005786E4 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		E4A612ED193CC182005786E4 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		E4A612EE193CC182005786E4 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		E4A612EF193CC182005786E4 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		E4A612F0193CC182005786E4 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
+		E4A9CAB819420A530081CE3F /* christbible_note_data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = christbible_note_data.xcdatamodel; sourceTree = "<group>"; };
+		E4A9CABA19420B670081CE3F /* ChristManagedCoreDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristManagedCoreDate.h; sourceTree = "<group>"; };
+		E4A9CABB19420B670081CE3F /* ChristManagedCoreDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristManagedCoreDate.m; sourceTree = "<group>"; };
+		E4A9CABD19420BAE0081CE3F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E4A9CAC2194211790081CE3F /* ChristManagedNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristManagedNotes.h; sourceTree = "<group>"; };
+		E4A9CAC3194211790081CE3F /* ChristManagedNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristManagedNotes.m; sourceTree = "<group>"; };
+		E4A9CAC519421FC30081CE3F /* ChristViewSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewSearch.h; sourceTree = "<group>"; };
+		E4A9CAC619421FC30081CE3F /* ChristViewSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewSearch.m; sourceTree = "<group>"; };
+		E4AF69B0193780B9001F6844 /* ChristTextEditBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristTextEditBar.h; sourceTree = "<group>"; };
+		E4AF69B1193780B9001F6844 /* ChristTextEditBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristTextEditBar.m; sourceTree = "<group>"; };
+		E4AF848E19409F9600438AEE /* ChristModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristModel.h; sourceTree = "<group>"; };
+		E4AF848F19409F9600438AEE /* ChristModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristModel.m; sourceTree = "<group>"; };
+		E4B253D31942C42C007AD771 /* ChristViewNotesEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewNotesEditor.h; sourceTree = "<group>"; };
+		E4B253D41942C42C007AD771 /* ChristViewNotesEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewNotesEditor.m; sourceTree = "<group>"; };
+		E4B253D61943187C007AD771 /* ChristNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristNotes.h; sourceTree = "<group>"; };
+		E4B253D71943187C007AD771 /* ChristNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristNotes.m; sourceTree = "<group>"; };
+		E4BE4323193B4552005A6363 /* biblebook.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = biblebook.epub; sourceTree = "<group>"; };
+		E4BE4324193B4552005A6363 /* biblebook_ce.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = biblebook_ce.epub; sourceTree = "<group>"; };
+		E4BE4325193B4552005A6363 /* christ.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = christ.plist; sourceTree = "<group>"; };
+		E4BE432B193B45FC005A6363 /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
+		E4BE432C193B45FC005A6363 /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
+		E4BE432D193B45FC005A6363 /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
+		E4BE432E193B45FC005A6363 /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
+		E4BE432F193B45FC005A6363 /* CXHTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHTMLDocument.h; sourceTree = "<group>"; };
+		E4BE4330193B45FC005A6363 /* CXHTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHTMLDocument.m; sourceTree = "<group>"; };
+		E4BE4331193B45FC005A6363 /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		E4BE4332193B45FC005A6363 /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		E4BE4333193B45FC005A6363 /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		E4BE4334193B45FC005A6363 /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		E4BE4335193B45FC005A6363 /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		E4BE4336193B45FC005A6363 /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		E4BE4337193B45FC005A6363 /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
+		E4BE4338193B45FC005A6363 /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
+		E4BE4339193B45FC005A6363 /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
+		E4BE433A193B45FC005A6363 /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
+		E4BE433B193B45FC005A6363 /* CXMLNamespaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNamespaceNode.h; sourceTree = "<group>"; };
+		E4BE433C193B45FC005A6363 /* CXMLNamespaceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNamespaceNode.m; sourceTree = "<group>"; };
+		E4BE433D193B45FC005A6363 /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		E4BE433E193B45FC005A6363 /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		E4BE433F193B45FC005A6363 /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		E4BE4340193B45FC005A6363 /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		E4BE4341193B45FC005A6363 /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		E4BE4342193B45FC005A6363 /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		E4BE4344193B45FC005A6363 /* CTidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTidy.h; sourceTree = "<group>"; };
+		E4BE4345193B45FC005A6363 /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
+		E4BE4346193B45FC005A6363 /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		E4BE4354193B471D005A6363 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		E4BE4356193B475E005A6363 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		E4BE4358193B476C005A6363 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +213,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A9CABE19420BAE0081CE3F /* CoreData.framework in Frameworks */,
+				E4A612F7193CC47C005786E4 /* libz.1.2.5.dylib in Frameworks */,
+				E4A612F6193CC472005786E4 /* libz.1.1.3.dylib in Frameworks */,
+				E4BE4355193B471D005A6363 /* libxml2.dylib in Frameworks */,
 				E421CC381934E377002E2A3F /* CoreGraphics.framework in Frameworks */,
 				E421CC3A1934E377002E2A3F /* UIKit.framework in Frameworks */,
 				E421CC361934E377002E2A3F /* Foundation.framework in Frameworks */,
@@ -96,6 +258,10 @@
 		E421CC341934E377002E2A3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4A9CABD19420BAE0081CE3F /* CoreData.framework */,
+				E4BE4358193B476C005A6363 /* libz.1.2.5.dylib */,
+				E4BE4356193B475E005A6363 /* libz.1.1.3.dylib */,
+				E4BE4354193B471D005A6363 /* libxml2.dylib */,
 				E421CC351934E377002E2A3F /* Foundation.framework */,
 				E421CC371934E377002E2A3F /* CoreGraphics.framework */,
 				E421CC391934E377002E2A3F /* UIKit.framework */,
@@ -109,7 +275,12 @@
 			children = (
 				E421CC441934E377002E2A3F /* ChristAppDelegate.h */,
 				E421CC451934E377002E2A3F /* ChristAppDelegate.m */,
-				E421CC471934E377002E2A3F /* Images.xcassets */,
+				E4AF848D19409F7600438AEE /* Model */,
+				E421CC741934ECEE002E2A3F /* Tools */,
+				E49CB3A9193CC93100C3A5D1 /* Service */,
+				E498428219361BEE003B9A05 /* Control */,
+				E421CC641934E3BF002E2A3F /* View */,
+				E4BE4322193B4552005A6363 /* Resources */,
 				E421CC3C1934E377002E2A3F /* Supporting Files */,
 			);
 			path = Bible;
@@ -142,6 +313,197 @@
 				E421CC571934E377002E2A3F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E421CC641934E3BF002E2A3F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E421CC691934E3BF002E2A3F /* ChristViewMenu.h */,
+				E421CC6A1934E3BF002E2A3F /* ChristViewMenu.m */,
+				E421CC6B1934E3BF002E2A3F /* ChristViewShowDetails.h */,
+				E421CC6C1934E3BF002E2A3F /* ChristViewShowDetails.m */,
+				CE63442B1935D1E8003D287B /* ChristViewScripture.h */,
+				CE63442C1935D1E8003D287B /* ChristViewScripture.m */,
+				CE63442E1935E41A003D287B /* ChristViewNotes.h */,
+				CE63442F1935E41A003D287B /* ChristViewNotes.m */,
+				CE6344311935E43E003D287B /* ChristViewHighlighted.h */,
+				CE6344321935E43E003D287B /* ChristViewHighlighted.m */,
+				CE6344341935E473003D287B /* ChristViewPlan.h */,
+				CE6344351935E473003D287B /* ChristViewPlan.m */,
+				CE6344371935E49E003D287B /* ChristViewSet.h */,
+				CE6344381935E49E003D287B /* ChristViewSet.m */,
+				CEA4BC05193EFAC700F7745E /* ChristViewDirectory.h */,
+				CEA4BC06193EFAC700F7745E /* ChristViewDirectory.m */,
+				E4A9CAC519421FC30081CE3F /* ChristViewSearch.h */,
+				E4A9CAC619421FC30081CE3F /* ChristViewSearch.m */,
+				E4B253D31942C42C007AD771 /* ChristViewNotesEditor.h */,
+				E4B253D41942C42C007AD771 /* ChristViewNotesEditor.m */,
+				E4A31DDC1945CFA3000E91F7 /* ChristViewBase.h */,
+				E4A31DDD1945CFA3000E91F7 /* ChristViewBase.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E421CC741934ECEE002E2A3F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E49CB3B6193CCDB700C3A5D1 /* GTMDefines.h */,
+				E49CB3B0193CCD4B00C3A5D1 /* GTMNSString+HTML.h */,
+				E49CB3B1193CCD4B00C3A5D1 /* GTMNSString+HTML.m */,
+				E49CB3B2193CCD4B00C3A5D1 /* NSString+HTML.h */,
+				E49CB3B3193CCD4B00C3A5D1 /* NSString+HTML.m */,
+				E4A612E4193CC182005786E4 /* ZipArchive */,
+				E4BE4329193B45FC005A6363 /* TouchXML */,
+				E421CC751934ED3F002E2A3F /* ChristUtils.h */,
+				E421CC761934ED3F002E2A3F /* ChristUtils.m */,
+				E4AF69B0193780B9001F6844 /* ChristTextEditBar.h */,
+				E4AF69B1193780B9001F6844 /* ChristTextEditBar.m */,
+				CEA4BC02193EBAF300F7745E /* ChristScriptureCell.h */,
+				CEA4BC03193EBAF300F7745E /* ChristScriptureCell.m */,
+			);
+			name = Tools;
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		E498428219361BEE003B9A05 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				E498428319361CAD003B9A05 /* ChristViewFactory.h */,
+				E498428419361CAD003B9A05 /* ChristViewFactory.m */,
+				E421CC711934E4FA002E2A3F /* ChristViewHome.h */,
+				E421CC721934E4FA002E2A3F /* ChristViewHome.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		E49CB3A9193CC93100C3A5D1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CEAEA289193D77310054BF91 /* ChristEpub.h */,
+				CEAEA28A193D77310054BF91 /* ChristEpub.m */,
+				E49CB3AA193CC95400C3A5D1 /* ChristChapter.h */,
+				E49CB3AB193CC95400C3A5D1 /* ChristChapter.m */,
+				CEAEA28C193D77770054BF91 /* ChristChapterEpub.h */,
+				CEAEA28D193D77770054BF91 /* ChristChapterEpub.m */,
+				CEA2C1F0194192BF00C68AD2 /* ChristBibleData.h */,
+				CEA2C1F1194192BF00C68AD2 /* ChristBibleData.m */,
+				E4A9CAC2194211790081CE3F /* ChristManagedNotes.h */,
+				E4A9CAC3194211790081CE3F /* ChristManagedNotes.m */,
+				E4B253D61943187C007AD771 /* ChristNotes.h */,
+				E4B253D71943187C007AD771 /* ChristNotes.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E4A31DDF1945F5B7000E91F7 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				E4A31DE81946041F000E91F7 /* next_chapter_on@2x.png */,
+				E4A31DE91946041F000E91F7 /* prev_chapter_on@2x.png */,
+				E4A31DE01945F5B7000E91F7 /* next_chapter@2x.png */,
+				E4A31DE21945F5B7000E91F7 /* prev_chapter@2x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		E4A612E4193CC182005786E4 /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				E4A612E5193CC182005786E4 /* minizip */,
+				E4A612EF193CC182005786E4 /* ZipArchive.h */,
+				E4A612F0193CC182005786E4 /* ZipArchive.mm */,
+			);
+			path = ZipArchive;
+			sourceTree = "<group>";
+		};
+		E4A612E5193CC182005786E4 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				E4A612E6193CC182005786E4 /* crypt.h */,
+				E4A612E7193CC182005786E4 /* ioapi.c */,
+				E4A612E8193CC182005786E4 /* ioapi.h */,
+				E4A612E9193CC182005786E4 /* mztools.c */,
+				E4A612EA193CC182005786E4 /* mztools.h */,
+				E4A612EB193CC182005786E4 /* unzip.c */,
+				E4A612EC193CC182005786E4 /* unzip.h */,
+				E4A612ED193CC182005786E4 /* zip.c */,
+				E4A612EE193CC182005786E4 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		E4AF848D19409F7600438AEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE63443C1935F3D9003D287B /* ChristConfig.h */,
+				E4AF848E19409F9600438AEE /* ChristModel.h */,
+				E4AF848F19409F9600438AEE /* ChristModel.m */,
+				E4A9CABA19420B670081CE3F /* ChristManagedCoreDate.h */,
+				E4A9CABB19420B670081CE3F /* ChristManagedCoreDate.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4BE4322193B4552005A6363 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4A31DDF1945F5B7000E91F7 /* Image */,
+				E4BE4323193B4552005A6363 /* biblebook.epub */,
+				E4BE4324193B4552005A6363 /* biblebook_ce.epub */,
+				E4BE4325193B4552005A6363 /* christ.plist */,
+				E4A9CAB719420A530081CE3F /* christbible_note_data.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E4BE4329193B45FC005A6363 /* TouchXML */ = {
+			isa = PBXGroup;
+			children = (
+				E4BE432A193B45FC005A6363 /* Creation */,
+				E4BE432F193B45FC005A6363 /* CXHTMLDocument.h */,
+				E4BE4330193B45FC005A6363 /* CXHTMLDocument.m */,
+				E4BE4331193B45FC005A6363 /* CXMLDocument.h */,
+				E4BE4332193B45FC005A6363 /* CXMLDocument.m */,
+				E4BE4333193B45FC005A6363 /* CXMLDocument_PrivateExtensions.h */,
+				E4BE4334193B45FC005A6363 /* CXMLDocument_PrivateExtensions.m */,
+				E4BE4335193B45FC005A6363 /* CXMLElement.h */,
+				E4BE4336193B45FC005A6363 /* CXMLElement.m */,
+				E4BE4337193B45FC005A6363 /* CXMLElement_CreationExtensions.h */,
+				E4BE4338193B45FC005A6363 /* CXMLElement_CreationExtensions.m */,
+				E4BE4339193B45FC005A6363 /* CXMLElement_ElementTreeExtensions.h */,
+				E4BE433A193B45FC005A6363 /* CXMLElement_ElementTreeExtensions.m */,
+				E4BE433B193B45FC005A6363 /* CXMLNamespaceNode.h */,
+				E4BE433C193B45FC005A6363 /* CXMLNamespaceNode.m */,
+				E4BE433D193B45FC005A6363 /* CXMLNode.h */,
+				E4BE433E193B45FC005A6363 /* CXMLNode.m */,
+				E4BE433F193B45FC005A6363 /* CXMLNode_PrivateExtensions.h */,
+				E4BE4340193B45FC005A6363 /* CXMLNode_PrivateExtensions.m */,
+				E4BE4341193B45FC005A6363 /* CXMLNode_XPathExtensions.h */,
+				E4BE4342193B45FC005A6363 /* CXMLNode_XPathExtensions.m */,
+				E4BE4343193B45FC005A6363 /* Tidy */,
+				E4BE4346193B45FC005A6363 /* TouchXML.h */,
+			);
+			path = TouchXML;
+			sourceTree = "<group>";
+		};
+		E4BE432A193B45FC005A6363 /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				E4BE432B193B45FC005A6363 /* CXMLDocument_CreationExtensions.h */,
+				E4BE432C193B45FC005A6363 /* CXMLDocument_CreationExtensions.m */,
+				E4BE432D193B45FC005A6363 /* CXMLNode_CreationExtensions.h */,
+				E4BE432E193B45FC005A6363 /* CXMLNode_CreationExtensions.m */,
+			);
+			path = Creation;
+			sourceTree = "<group>";
+		};
+		E4BE4343193B45FC005A6363 /* Tidy */ = {
+			isa = PBXGroup;
+			children = (
+				E4BE4344193B45FC005A6363 /* CTidy.h */,
+				E4BE4345193B45FC005A6363 /* CTidy.m */,
+			);
+			path = Tidy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +583,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E421CC401934E377002E2A3F /* InfoPlist.strings in Resources */,
-				E421CC481934E377002E2A3F /* Images.xcassets in Resources */,
+				E4A31DEA1946041F000E91F7 /* next_chapter_on@2x.png in Resources */,
+				E4A31DEB1946041F000E91F7 /* prev_chapter_on@2x.png in Resources */,
+				E4BE4326193B4552005A6363 /* biblebook.epub in Resources */,
+				E4A31DE61945F5B7000E91F7 /* prev_chapter@2x.png in Resources */,
+				E4BE4327193B4552005A6363 /* biblebook_ce.epub in Resources */,
+				E4A31DE41945F5B7000E91F7 /* next_chapter@2x.png in Resources */,
+				E4BE4328193B4552005A6363 /* christ.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +608,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A612F3193CC182005786E4 /* unzip.c in Sources */,
+				E4BE4347193B45FC005A6363 /* CXMLDocument_CreationExtensions.m in Sources */,
+				E4AF69B2193780B9001F6844 /* ChristTextEditBar.m in Sources */,
+				E4BE4353193B45FC005A6363 /* CTidy.m in Sources */,
+				E4BE4349193B45FC005A6363 /* CXHTMLDocument.m in Sources */,
+				CE6344331935E43E003D287B /* ChristViewHighlighted.m in Sources */,
+				CEAEA28E193D77770054BF91 /* ChristChapterEpub.m in Sources */,
+				CEAEA28B193D77310054BF91 /* ChristEpub.m in Sources */,
+				E4B253D81943187C007AD771 /* ChristNotes.m in Sources */,
+				CE6344301935E41A003D287B /* ChristViewNotes.m in Sources */,
+				E4A612F4193CC182005786E4 /* zip.c in Sources */,
+				E4BE434C193B45FC005A6363 /* CXMLElement.m in Sources */,
+				CEA2C1F2194192BF00C68AD2 /* ChristBibleData.m in Sources */,
+				CEA4BC04193EBAF300F7745E /* ChristScriptureCell.m in Sources */,
+				CE63442D1935D1E8003D287B /* ChristViewScripture.m in Sources */,
+				E4BE4348193B45FC005A6363 /* CXMLNode_CreationExtensions.m in Sources */,
+				E4A612F1193CC182005786E4 /* ioapi.c in Sources */,
+				E4BE434F193B45FC005A6363 /* CXMLNamespaceNode.m in Sources */,
+				E4BE434A193B45FC005A6363 /* CXMLDocument.m in Sources */,
+				E4B253D51942C42C007AD771 /* ChristViewNotesEditor.m in Sources */,
+				E4A31DDE1945CFA3000E91F7 /* ChristViewBase.m in Sources */,
+				E4A612F2193CC182005786E4 /* mztools.c in Sources */,
+				E4BE4352193B45FC005A6363 /* CXMLNode_XPathExtensions.m in Sources */,
+				CE6344361935E473003D287B /* ChristViewPlan.m in Sources */,
 				E421CC421934E377002E2A3F /* main.m in Sources */,
+				E4AF849019409F9600438AEE /* ChristModel.m in Sources */,
+				E498428519361CAD003B9A05 /* ChristViewFactory.m in Sources */,
+				E4BE434E193B45FC005A6363 /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				E49CB3B5193CCD4B00C3A5D1 /* NSString+HTML.m in Sources */,
+				E4BE4351193B45FC005A6363 /* CXMLNode_PrivateExtensions.m in Sources */,
+				CE6344391935E49E003D287B /* ChristViewSet.m in Sources */,
+				E421CC6F1934E3BF002E2A3F /* ChristViewMenu.m in Sources */,
+				CEA4BC07193EFAC700F7745E /* ChristViewDirectory.m in Sources */,
+				E4A612F5193CC182005786E4 /* ZipArchive.mm in Sources */,
+				E4A9CAC719421FC30081CE3F /* ChristViewSearch.m in Sources */,
+				E4BE434D193B45FC005A6363 /* CXMLElement_CreationExtensions.m in Sources */,
+				E49CB3B4193CCD4B00C3A5D1 /* GTMNSString+HTML.m in Sources */,
+				E4A9CAC4194211790081CE3F /* ChristManagedNotes.m in Sources */,
 				E421CC461934E377002E2A3F /* ChristAppDelegate.m in Sources */,
+				E4A9CAB919420A530081CE3F /* christbible_note_data.xcdatamodeld in Sources */,
+				E4BE434B193B45FC005A6363 /* CXMLDocument_PrivateExtensions.m in Sources */,
+				E421CC701934E3BF002E2A3F /* ChristViewShowDetails.m in Sources */,
+				E49CB3AC193CC95400C3A5D1 /* ChristChapter.m in Sources */,
+				E421CC771934ED3F002E2A3F /* ChristUtils.m in Sources */,
+				E421CC731934E4FA002E2A3F /* ChristViewHome.m in Sources */,
+				E4BE4350193B45FC005A6363 /* CXMLNode.m in Sources */,
+				E4A9CABC19420B670081CE3F /* ChristManagedCoreDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,10 +773,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bible/Bible-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "Bible/Bible-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos7.0;
+				USER_HEADER_SEARCH_PATHS = "";
+				WARNING_CFLAGS = "-Wall";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -373,10 +798,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bible/Bible-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "Bible/Bible-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos7.0;
+				USER_HEADER_SEARCH_PATHS = "";
+				WARNING_CFLAGS = "-Wall";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -386,6 +823,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bible.app/Bible";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -409,6 +847,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Bible.app/Bible";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -442,6 +881,7 @@
 				E421CC601934E377002E2A3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E421CC611934E377002E2A3F /* Build configuration list for PBXNativeTarget "BibleTests" */ = {
 			isa = XCConfigurationList;
@@ -450,8 +890,22 @@
 				E421CC631934E377002E2A3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E4A9CAB719420A530081CE3F /* christbible_note_data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E4A9CAB819420A530081CE3F /* christbible_note_data.xcdatamodel */,
+			);
+			currentVersion = E4A9CAB819420A530081CE3F /* christbible_note_data.xcdatamodel */;
+			path = christbible_note_data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E421CC2A1934E377002E2A3F /* Project object */;
 }
