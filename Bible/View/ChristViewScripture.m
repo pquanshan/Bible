@@ -89,13 +89,34 @@
     return self;
 }
 
--(void)viewAppear{
-    NSString* volume = [ChristUtils getDataByKey:KUserSaveVolume];
-    NSString* chapter = [ChristUtils getDataByKey:KUserSaveChapter];
+//-(void)viewAppear{
+//    NSString* volume = [ChristUtils getDataByKey:KUserSaveVolume];
+//    NSString* chapter = [ChristUtils getDataByKey:KUserSaveChapter];
+//    if (volume && chapter) {
+//        [self setEpubData:[volume intValue] cindex:[chapter intValue]];
+//    }else{
+//        [self setEpubData:1 cindex:1];
+//    }
+//}
+
+-(void)setDic:(NSDictionary *)dic{
+    NSString* volume = [dic objectForKey:KUserSaveVolume];
+    NSString* chapter = [dic objectForKey:KUserSaveChapter];
+    NSString* section = [dic objectForKey:KUserSaveSection];
     if (volume && chapter) {
         [self setEpubData:[volume intValue] cindex:[chapter intValue]];
     }else{
         [self setEpubData:1 cindex:1];
+    }
+    
+    if (section && [section intValue] > 1) {
+        [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:([section intValue] - 1) inSection:0]
+                               animated:YES
+                         scrollPosition:UITableViewScrollPositionTop];
+    }else{
+        [_tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]
+                                animated:YES
+                          scrollPosition:UITableViewScrollPositionTop];
     }
 }
 
@@ -443,6 +464,7 @@
     [_navigationView setHidden:!bl];
     [self setNextPrevBtnHide:!bl];
     [self statusChange];
+    [_tableView reloadData];
 }
 
 -(void)statusChange{

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 pquanshan. All rights reserved.
 //
 #define KSearchTestament                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
-
+#define KBackBtnWidth               (60)
 
 #import "ChristUtils.h"
 #import "ChristModel.h"
@@ -30,7 +30,7 @@
     NSString* volumeStr;
     NSString* chapterStr;
     
-//    UIButton* backButton;
+    UIButton* backButton;
 }
 @end
 
@@ -59,6 +59,8 @@
         [sRangeTabview selectRowAtIndexPath:first animated:YES scrollPosition:UITableViewScrollPositionNone];
         sRangeTitle.text = [sRangeArr objectAtIndex:0];
         searchRangeArr = [self getSearchRangeArr:nil];
+        
+        [self setUpForDismissKeyboard];
     }
     return self;
 }
@@ -84,36 +86,49 @@
     }
     //sRangeArr变化了的话
     if (bl) {
-        [sRangeTabview reloadData];
         NSIndexPath  *first = [NSIndexPath indexPathForRow:0 inSection:0];
         [sRangeTabview selectRowAtIndexPath:first animated:YES scrollPosition:UITableViewScrollPositionNone];
         sRangeTitle.text = [sRangeArr objectAtIndex:0];
         searchRangeArr = [self getSearchRangeArr:sRangeTitle.text];
+        searchArr = nil;
+        numberResults.attributedText = nil;
+        searchBarBible.text = nil;
+        [sRangeTabview reloadData];
+        [searchTabview reloadData];
     }
-}
-
-//点击屏幕空白处去掉键盘
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [searchBarBible resignFirstResponder];
+    [self initNavigation];
 }
 
 #pragma mark - init
 -(void)initNavigation{
-    navigationView = [[UIView alloc]initWithFrame:CGRectMake(0, KStatusBarHeight, self.frame.size.width, KNavigationHeight)];
-    [navigationView setBackgroundColor:[UIColor whiteColor]];
-    [self addSubview:navigationView];
+    if (navigationView == nil) {
+        navigationView = [[UIView alloc]initWithFrame:CGRectMake(0, KStatusBarHeight, self.frame.size.width, KNavigationHeight)];
+        [navigationView setBackgroundColor:[UIColor whiteColor]];
+        [self addSubview:navigationView];
+    }
+    if (searchBarBible == nil) {
+        searchBarBible = [[UISearchBar alloc] init];
+        searchBarBible.frame = CGRectMake(0, 0, self.frame.size.width, KNavigationHeight);
+        searchBarBible.placeholder = @"请输入搜索关键字";
+        searchBarBible.delegate = self;
+        [navigationView addSubview:searchBarBible];
+    }
+    if (backButton == nil) {
+        backButton = [ChristUtils buttonWithImg:@"取消" off:0 image:nil imagesec:nil target:self action:@selector(backButtonClick:)];
+        backButton.frame = CGRectMake(0, 0, KBackBtnWidth, KNavigationHeight);
+        [backButton setBackgroundColor:RGBCOLOR(210, 210, 210)];
+//        [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [navigationView addSubview:backButton];
+    }
     
-    searchBarBible = [[UISearchBar alloc] init];
-    searchBarBible.frame = CGRectMake(0, 0, self.frame.size.width, KNavigationHeight);
-    searchBarBible.placeholder = @"请输入搜索关键字";
-    searchBarBible.delegate = self;
-    [navigationView addSubview:searchBarBible];
-    
-//    backButton = [ChristUtils buttonWithImg:@"取消" off:0 image:nil imagesec:nil target:self action:@selector(backButtonClick:)];
-//    backButton.frame = CGRectMake(navigationView.frame.size.width - backButton.frame.size.width - KCellOff, 0, backButton.frame.size.width, KNavigationHeight);
-//    [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [navigationView addSubview:backButton];
+    if (sRangeArr.count == 13) {//菜单切换过来
+        [backButton setHidden:YES];
+         searchBarBible.frame = CGRectMake(0, 0, self.frame.size.width, KNavigationHeight);
+    }else if (sRangeArr.count == 14){//圣经切换过来
+        [backButton setHidden:NO];
+        backButton.frame = CGRectMake(0, 0, KBackBtnWidth, KNavigationHeight);
+        searchBarBible.frame = CGRectMake(KBackBtnWidth, 0, self.frame.size.width - KBackBtnWidth, KNavigationHeight);
+    }
 }
 
 
@@ -260,7 +275,16 @@
 
 #pragma mark - UIButton Click
 -(void)singleTap:(UITapGestureRecognizer*)recognizer{
+     [searchBarBible resignFirstResponder];
      [self movePanelsRangeTabview:!isRange];
+}
+
+-(void)backButtonClick:(id)sender{
+    NSMutableDictionary *mtDic = [[NSMutableDictionary alloc] init];
+    [mtDic setObject:[ChristUtils getDataByKey:KUserSaveVolume] forKey:KUserSaveVolume];
+    [mtDic setObject:[ChristUtils getDataByKey:KUserSaveChapter] forKey:KUserSaveChapter];
+    [mtDic setObject:[ChristUtils getNumberByInt:ChristViewTypeScripture] forKey:KViewPageType];
+    [SysDelegate.viewHome switchPage:self dic:mtDic animationType:kCATransitionFromTop];
 }
 
 #pragma mark - UISearchBarDelegate
@@ -329,7 +353,12 @@
         int chapter = (VCS - volume*1000000)/1000;
         int section = VCS - volume*1000000 - chapter*1000;
         
-//        [SysDelegate.viewHome switchPage:<#(id)#> dic:<#(NSDictionary *)#> animationType:<#(NSString *)#>]
+        NSMutableDictionary *mtDic = [[NSMutableDictionary alloc] init];
+        [mtDic setObject:[ChristUtils getStringByInt:volume] forKey:KUserSaveVolume];
+        [mtDic setObject:[ChristUtils getStringByInt:chapter] forKey:KUserSaveChapter];
+        [mtDic setObject:[ChristUtils getStringByInt:section] forKey:KUserSaveSection];
+        [mtDic setObject:[ChristUtils getNumberByInt:ChristViewTypeScripture] forKey:KViewPageType];
+        [SysDelegate.viewHome switchPage:self dic:mtDic animationType:kCATransitionFromTop];
     }
 }
 
@@ -407,6 +436,31 @@
     }
 
     return cell;
+}
+
+- (void)setUpForDismissKeyboard {
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    UITapGestureRecognizer *singleTapGR =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(tapAnywhereToDismissKeyboard:)];
+    NSOperationQueue *mainQuene =[NSOperationQueue mainQueue];
+    [nc addObserverForName:UIKeyboardWillShowNotification
+                    object:nil
+                     queue:mainQuene
+                usingBlock:^(NSNotification *note){
+                    [self addGestureRecognizer:singleTapGR];
+                }];
+    [nc addObserverForName:UIKeyboardWillHideNotification
+                    object:nil
+                     queue:mainQuene
+                usingBlock:^(NSNotification *note){
+                    [self removeGestureRecognizer:singleTapGR];
+                }];
+}
+
+- (void)tapAnywhereToDismissKeyboard:(UIGestureRecognizer *)gestureRecognizer {
+    //点击屏幕空白处去掉键盘
+    [searchBarBible resignFirstResponder];
 }
 
 @end

@@ -290,15 +290,15 @@
 -(void)chapterArrBtnClick:(id)sender{
     UIButton *btn = (UIButton *)sender;
     int index = KChapterArrBtnParsTag(btn.tag);
-    
     [ChristUtils setDataByKey:[ChristUtils getStringByInt:chapterIndex] forkey:KUserSaveVolume];
     [ChristUtils setDataByKey:[ChristUtils getStringByInt:(index + 1)] forkey:KUserSaveChapter];
-    
     [self backButtonClick:nil];
 }
 
 -(void)backButtonClick:(id)sender{
     NSMutableDictionary *mtDic = [[NSMutableDictionary alloc] init];
+    [mtDic setObject:[ChristUtils getDataByKey:KUserSaveVolume] forKey:KUserSaveVolume];
+    [mtDic setObject:[ChristUtils getDataByKey:KUserSaveChapter] forKey:KUserSaveChapter];
     [mtDic setObject:[ChristUtils getNumberByInt:ChristViewTypeScripture] forKey:KViewPageType];
     [SysDelegate.viewHome switchPage:self dic:mtDic animationType:kCATransitionFromTop];
 }
