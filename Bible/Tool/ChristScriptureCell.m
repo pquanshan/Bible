@@ -93,7 +93,7 @@
                                      font:[UIFont fontWithName:@"Arial" size:12]
                                     color:[UIColor grayColor]];
         label.tag = KTagChapterLab;
-        label.textAlignment = UITextAlignmentLeft;
+        label.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:label];
     }else{
         label.text = _chaptertext;
@@ -139,7 +139,7 @@
                                            font:[[ChristModel shareModel] getBodyTextFont]
                                           color:[[ChristModel shareModel] getBodyTextColor]];
         label.tag = KContentTextItem(lines);
-        label.textAlignment = UITextAlignmentLeft;
+        label.textAlignment = NSTextAlignmentLeft;
         [contentView addSubview:label];
         lines++;
     }

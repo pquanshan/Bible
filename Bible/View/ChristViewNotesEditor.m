@@ -104,7 +104,7 @@
                                                               height)
                                               font:[UIFont fontWithName:@"Arial" size:15]
                                              color:[[ChristModel shareModel] getBodyTextColor]];
-        label.textAlignment = UITextAlignmentLeft;
+        label.textAlignment = NSTextAlignmentLeft;
         [scriptureView addSubview:label];
         
         lines++;

@@ -98,16 +98,10 @@
 }
 
 #pragma mark - interface function
--(BOOL)getMenuOpening{
-    return _isMenuOpening;
-}
 
--(void)switchPage:(id)target dic:(NSDictionary *)dic animationType:(NSString *)animationType{
-    if (dic == nil) {
-        _isMenuOpening = YES;
-        [self movePanelShowMenu:YES];
-    }else{
-        _isMenuOpening = NO;
+
+-(void)switchPage:(id)target dic:(NSMutableDictionary *)dic animationType:(NSString *)animationType{
+    if (dic != nil) {
         [self movePanelShowMenu:NO];
         //切换页面
         if ([dic objectForKey:KViewPageType]) {
@@ -117,8 +111,8 @@
         }else{
             return;
         }
-        
     }
+
 }
 
 -(void)setRecognizerState:(BOOL)bl{
@@ -280,6 +274,7 @@
 }
 
 -(void)movePanelShowMenu:(BOOL)bl{
+    _isMenuOpening = bl;
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         if (bl) {
             [_viewMenu setFrame:CGRectMake(0, 0, KPanelViewWidth, self.view.frame.size.height)];

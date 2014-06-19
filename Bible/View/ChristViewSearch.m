@@ -26,6 +26,7 @@
     NSArray* searchRangeArr;
     NSArray* searchArr;
     BOOL  isRange;
+    BOOL isScripture;
     
     NSString* volumeStr;
     NSString* chapterStr;
@@ -48,6 +49,7 @@
         
         sRangeArr = [[NSMutableArray alloc] initWithObjects:@"整本圣经",@"旧约",@"新约",@"摩西五经",@"历史书",@"诗歌、智慧书",@"大先知书",@"小先知书",@"四福音",@"教会历史",@"保罗书信",@"其他书信",@"启示录", nil];
         isRange = NO;
+        isScripture = NO;
 
         [self addSubview:lab];
         [self initNavigation];
@@ -67,6 +69,10 @@
 
 -(void)viewAppear{
 
+}
+
+-(void)viewDisappear{
+    [SysDelegate.viewHome setRecognizerState:NO];
 }
 
 -(void)setDic:(NSDictionary *)dic{
@@ -89,13 +95,13 @@
         NSIndexPath  *first = [NSIndexPath indexPathForRow:0 inSection:0];
         [sRangeTabview selectRowAtIndexPath:first animated:YES scrollPosition:UITableViewScrollPositionNone];
         sRangeTitle.text = [sRangeArr objectAtIndex:0];
-        searchRangeArr = [self getSearchRangeArr:sRangeTitle.text];
         searchArr = nil;
         numberResults.attributedText = nil;
         searchBarBible.text = nil;
         [sRangeTabview reloadData];
         [searchTabview reloadData];
     }
+    searchRangeArr = [self getSearchRangeArr:sRangeTitle.text];
     [self initNavigation];
 }
 
@@ -122,12 +128,16 @@
     }
     
     if (sRangeArr.count == 13) {//菜单切换过来
+        isScripture = NO;
         [backButton setHidden:YES];
          searchBarBible.frame = CGRectMake(0, 0, self.frame.size.width, KNavigationHeight);
+        [SysDelegate.viewHome setRecognizerState:NO];
     }else if (sRangeArr.count == 14){//圣经切换过来
+        isScripture = YES;
         [backButton setHidden:NO];
         backButton.frame = CGRectMake(0, 0, KBackBtnWidth, KNavigationHeight);
         searchBarBible.frame = CGRectMake(KBackBtnWidth, 0, self.frame.size.width - KBackBtnWidth, KNavigationHeight);
+        [SysDelegate.viewHome setRecognizerState:YES];
     }
 }
 
@@ -149,7 +159,7 @@
                                       frame:CGRectMake(self.frame.size.width/4, 0, self.frame.size.width*3/8, KTabButtonHeight1)
                                        font:[UIFont fontWithName:@"Arial" size:15]
                                       color: [UIColor whiteColor]];
-    sRangeTitle.textAlignment = UITextAlignmentLeft;
+    sRangeTitle.textAlignment = NSTextAlignmentLeft;
     [sRangeTitleView addSubview:sRangeTitle];
     
     
@@ -157,7 +167,7 @@
                                       frame:CGRectMake(self.frame.size.width* 5/8, 0, self.frame.size.width*3/8, KTabButtonHeight1)
                                        font:[UIFont fontWithName:@"Arial" size:12]
                                       color: [UIColor grayColor]];
-    numberResults.textAlignment = UITextAlignmentRight;
+    numberResults.textAlignment = NSTextAlignmentRight;
     [sRangeTitleView addSubview:numberResults];
 }
 
@@ -296,7 +306,9 @@
     }
 }
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
-    [SysDelegate.viewHome setRecognizerState:YES];
+    if (!isScripture) {
+        [SysDelegate.viewHome setRecognizerState:YES];
+    }
 }
 
 //搜索按钮
@@ -315,17 +327,23 @@
 }
 
 - (void)keyboardDidShow:(NSNotification *)aNotification {
-    [SysDelegate.viewHome setRecognizerState:YES];
+    if (!isScripture) {
+        [SysDelegate.viewHome setRecognizerState:YES];
+    }
 }
 
 - (void)keyboardDidHide:(NSNotification *)aNotification {
-    [SysDelegate.viewHome setRecognizerState:NO];
+    if (!isScripture) {
+        [SysDelegate.viewHome setRecognizerState:NO];
+    }
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [searchBarBible resignFirstResponder];
-    [SysDelegate.viewHome setRecognizerState:NO];
+    if (!isScripture) {
+        [SysDelegate.viewHome setRecognizerState:NO];
+    }
     
     if (tableView == sRangeTabview) {
         [self movePanelsRangeTabview:NO];

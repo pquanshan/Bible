@@ -153,14 +153,14 @@
                                                     frame:CGRectMake(KLROff/2, 0, btn.frame.size.width - KLROff, btn.frame.size.height*2/3)
                                                      font:[UIFont fontWithName:@"Arial" size:18]
                                                     color:[UIColor whiteColor]];
-            cutTitle.textAlignment = UITextAlignmentLeft;
+            cutTitle.textAlignment = NSTextAlignmentLeft;
             [btn addSubview:cutTitle];
             
             UILabel* title = [ChristUtils labelWithTxt:[self getbtnTitle:i]
                                                     frame:CGRectMake(KLROff/2, btn.frame.size.height*2/3, btn.frame.size.width - KLROff, btn.frame.size.height/3)
                                                      font:[UIFont fontWithName:@"Arial" size:10]
                                                     color:[UIColor whiteColor]];
-            title.textAlignment = UITextAlignmentLeft;
+            title.textAlignment = NSTextAlignmentLeft;
             [btn addSubview:title];
             
             
@@ -189,14 +189,14 @@
                                                     frame:CGRectMake(KLROff/2, 0, btn.frame.size.width - KLROff, btn.frame.size.height*2/3)
                                                      font:[UIFont fontWithName:@"Arial" size:18]
                                                     color:[UIColor whiteColor]];
-            cutTitle.textAlignment = UITextAlignmentLeft;
+            cutTitle.textAlignment = NSTextAlignmentLeft;
             [btn addSubview:cutTitle];
             
             UILabel* title = [ChristUtils labelWithTxt:[self getbtnTitle:(i + KBibleOldVolumeNumber)]
                                                  frame:CGRectMake(KLROff/2, btn.frame.size.height*2/3, btn.frame.size.width - KLROff, btn.frame.size.height/3)
                                                   font:[UIFont fontWithName:@"Arial" size:10]
                                                  color:[UIColor whiteColor]];
-            title.textAlignment = UITextAlignmentLeft;
+            title.textAlignment = NSTextAlignmentLeft;
             [btn addSubview:title];
         }
 

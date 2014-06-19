@@ -106,7 +106,13 @@
     if (volume && chapter) {
         [self setEpubData:[volume intValue] cindex:[chapter intValue]];
     }else{
-        [self setEpubData:1 cindex:1];
+        volume = [ChristUtils getDataByKey:KUserSaveVolume];
+        chapter = [ChristUtils getDataByKey:KUserSaveChapter];
+        if (volume && chapter) {
+            [self setEpubData:[volume intValue] cindex:[chapter intValue]];
+        }else{
+            [self setEpubData:1 cindex:1];
+        }
     }
     
     if (section && [section intValue] > 1) {
@@ -311,9 +317,7 @@
 
 #pragma mark - UIButton Click
 -(void)menuButtonClick:(id)sender{
-    if (!SysDelegate.viewHome.isMenuOpening ){
-        [SysDelegate.viewHome switchPage:self dic:nil animationType:nil];
-    }
+    [SysDelegate.viewHome  movePanelShowMenu:!SysDelegate.viewHome.isMenuOpening];
 }
 
 -(void)titleButtonClick:(id)sender{

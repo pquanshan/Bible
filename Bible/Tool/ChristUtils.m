@@ -117,7 +117,7 @@ static ChristUtils* _shareUtils = nil;
     UILabel* label = [[UILabel alloc] initWithFrame:frame];
     label.text = buttonText;
     label.font = font;
-    label.textAlignment = UITextAlignmentCenter;   //first deprecated in IOS 6.0
+    label.textAlignment = NSTextAlignmentCenter;   //first deprecated in IOS 6.0
     label.textColor = color;
     label.backgroundColor = [UIColor clearColor];
     

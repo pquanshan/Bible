@@ -32,6 +32,7 @@
 		E421CC701934E3BF002E2A3F /* ChristViewShowDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC6C1934E3BF002E2A3F /* ChristViewShowDetails.m */; };
 		E421CC731934E4FA002E2A3F /* ChristViewHome.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC721934E4FA002E2A3F /* ChristViewHome.m */; };
 		E421CC771934ED3F002E2A3F /* ChristUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E421CC761934ED3F002E2A3F /* ChristUtils.m */; };
+		E48A666519508AF20009A507 /* ChristShareMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E48A666419508AF20009A507 /* ChristShareMenu.m */; };
 		E498428519361CAD003B9A05 /* ChristViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E498428419361CAD003B9A05 /* ChristViewFactory.m */; };
 		E49CB3AC193CC95400C3A5D1 /* ChristChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB3AB193CC95400C3A5D1 /* ChristChapter.m */; };
 		E49CB3B4193CCD4B00C3A5D1 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E49CB3B1193CCD4B00C3A5D1 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -131,6 +132,8 @@
 		E421CC721934E4FA002E2A3F /* ChristViewHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChristViewHome.m; path = ../View/ChristViewHome.m; sourceTree = "<group>"; };
 		E421CC751934ED3F002E2A3F /* ChristUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristUtils.h; sourceTree = "<group>"; };
 		E421CC761934ED3F002E2A3F /* ChristUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristUtils.m; sourceTree = "<group>"; };
+		E48A666319508AF20009A507 /* ChristShareMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristShareMenu.h; sourceTree = "<group>"; };
+		E48A666419508AF20009A507 /* ChristShareMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristShareMenu.m; sourceTree = "<group>"; };
 		E498428319361CAD003B9A05 /* ChristViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristViewFactory.h; sourceTree = "<group>"; };
 		E498428419361CAD003B9A05 /* ChristViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChristViewFactory.m; sourceTree = "<group>"; };
 		E49CB3AA193CC95400C3A5D1 /* ChristChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChristChapter.h; sourceTree = "<group>"; };
@@ -360,6 +363,8 @@
 				E4AF69B1193780B9001F6844 /* ChristTextEditBar.m */,
 				CEA4BC02193EBAF300F7745E /* ChristScriptureCell.h */,
 				CEA4BC03193EBAF300F7745E /* ChristScriptureCell.m */,
+				E48A666319508AF20009A507 /* ChristShareMenu.h */,
+				E48A666419508AF20009A507 /* ChristShareMenu.m */,
 			);
 			name = Tools;
 			path = Tool;
@@ -609,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4A612F3193CC182005786E4 /* unzip.c in Sources */,
+				E48A666519508AF20009A507 /* ChristShareMenu.m in Sources */,
 				E4BE4347193B45FC005A6363 /* CXMLDocument_CreationExtensions.m in Sources */,
 				E4AF69B2193780B9001F6844 /* ChristTextEditBar.m in Sources */,
 				E4BE4353193B45FC005A6363 /* CTidy.m in Sources */,

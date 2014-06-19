@@ -22,8 +22,9 @@
 
 @property(assign) BOOL isMenuOpening;
 
--(void)switchPage:(id)target dic:(NSDictionary*)dic animationType:(NSString*)animationType;
+-(void)switchPage:(id)target dic:(NSMutableDictionary*)dic animationType:(NSString*)animationType;
 -(void)setRecognizerState:(BOOL)bl;
+-(void)movePanelShowMenu:(BOOL)bl;
 
 
 @end
