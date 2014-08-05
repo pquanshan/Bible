@@ -60,8 +60,6 @@
 -(ChristChapterEpub*) getSheetChapter:(int)sheetIndex{
     ChristChapterEpub* chapterText = [_bibleTextDic objectForKey:[ChristUtils getNumberByInt:sheetIndex]];
     if (chapterText) {
-//        [];
-        
     }else{
         //开始解析了
         [self parsBible:sheetIndex];

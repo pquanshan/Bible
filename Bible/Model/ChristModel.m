@@ -21,39 +21,39 @@ static ChristModel* _sharedModel = nil;
 
 @synthesize messageArray = _messageArray;
 
-//+(ChristModel*)shareModel{
-//	if (!_sharedModel) {
-//        _sharedModel = [[self alloc]init];
-//        _sharedModel.bibledata = [[ChristBibleData alloc] init];
-//        [[NSNotificationCenter defaultCenter] addObserver:self
-//                                                 selector:@selector(serviceBack:)
-//                                                     name:KServiceBack
-//                                                   object:NULL];
-//	}
-//	return _sharedModel;
-//};
-
 +(ChristModel*)shareModel{
-    static ChristModel* sharedModel = nil;
-    static dispatch_once_t predicate;
-    dispatch_once(&predicate, ^{
-        sharedModel = [[self alloc] init];
-    });
-    return sharedModel;
-};
-
-
--(id)init{
-    self = [super init];
-    if (self) {
+	if (!_sharedModel) {
+        _sharedModel = [[self alloc]init];
         _sharedModel.bibledata = [[ChristBibleData alloc] init];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(serviceBack:)
                                                      name:KServiceBack
                                                    object:NULL];
-    }
-    return self;
-}
+	}
+	return _sharedModel;
+};
+
+//+(ChristModel*)shareModel{
+//    static ChristModel* sharedModel = nil;
+//    static dispatch_once_t predicate;
+//    dispatch_once(&predicate, ^{
+//        sharedModel = [[self alloc] init];
+//    });
+//    return sharedModel;
+//};
+//
+//
+//-(id)init{
+//    self = [super init];
+//    if (self) {
+//        _sharedModel.bibledata = [[ChristBibleData alloc] init];
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(serviceBack:)
+//                                                     name:KServiceBack
+//                                                   object:NULL];
+//    }
+//    return self;
+//}
 
 -(NSArray*)getBibleTiltleArr{
     if (_bibleTiltleArr == nil) {
