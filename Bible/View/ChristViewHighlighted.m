@@ -122,7 +122,7 @@
     
     UILabel* labline = (UILabel*)[cell.contentView viewWithTag:1000];
     if (labline == nil) {
-        UILabel *labline =  [ChristUtils labelWithTxt:nil frame:CGRectMake(0, cell.contentView.frame.size.height - 0.5, 320, 0.5) font:nil color:nil];
+        labline =  [ChristUtils labelWithTxt:nil frame:CGRectMake(0, cell.contentView.frame.size.height - 0.5, 320, 0.5) font:nil color:nil];
         labline.backgroundColor = RGBCOLOR(230,230,60);
         labline.tag = 1000;
         [cell.contentView addSubview:labline];

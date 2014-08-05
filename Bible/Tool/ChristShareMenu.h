@@ -58,8 +58,6 @@
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) UIImage *image;
 @property (nonatomic,strong) UIImage *isShareImagToAppImage;
-@property (nonatomic,strong) NSString *imageurl;
-@property (nonatomic,strong) NSString *isShareImagToAppImageurl;
 @property (nonatomic) BOOL blShareImageToApp;
 
 @property (nonatomic, strong) id <JJHShareMenuClick> delegateClick;

@@ -16,6 +16,7 @@
 #import "ChristViewDirectory.h"
 #import "ChristViewSearch.h"
 #import "ChristViewNotesEditor.h"
+#import "ChristShareMenu.h"
 #import <Foundation/Foundation.h>
 
 typedef enum {

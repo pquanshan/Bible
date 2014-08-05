@@ -438,6 +438,7 @@
         if (!SysDelegate.viewHome.isMenuOpening) {
             BOOL bl = _quickSetBar.hidden;
             [self setReadModel];
+            [SysDelegate.viewHome setRecognizerState:!bl];
             [_delegate singleTap:self recognizer:recognizer bl:bl];
         }
     }

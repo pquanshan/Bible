@@ -36,7 +36,7 @@
 #pragma mark - interface function
 -(void)switchPage:(ChristViewBase*)currentView nextView:(ChristViewBase*)nextView  dic:(NSMutableDictionary*)dic  animationType:(NSString *)animationType{
     //先设置之前页面类型
-    [dic setObject:[ChristUtils getNumberByInt:[ChristUtils getDetailsViewType]] forKey:KViewPrevPageType];
+    [dic setObject:[ChristUtils getNumberByInt:[[ChristModel shareModel] getDetailsViewType]] forKey:KViewPrevPageType];
     
     int viewtype = [[dic objectForKey:KViewPageType] intValue];
     [_currentView viewDisappear];

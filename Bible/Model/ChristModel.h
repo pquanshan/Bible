@@ -8,15 +8,8 @@
 
 #import "ChristBibleData.h"
 #import "ChristManagedCoreDate.h"
+#import "ChristModelDefine.h"
 #import <Foundation/Foundation.h>
-
-
-typedef enum {
-    //界面模式
-    ChristViewDaytimeMode = 0,
-    ChristViewNightMode,
-    
-} ChristViewModeType;
 
 @interface ChristModel : NSObject
 
@@ -25,6 +18,8 @@ typedef enum {
 @property(nonatomic) ChristBibleData*  bibledata;
 @property(nonatomic) ChristManagedCoreDate* notesData;
 @property(nonatomic) NSArray* bibleTiltleArr;
+
+@property(nonatomic, strong)NSMutableArray* messageArray;
 
 //plist中圣经标题信息
 -(NSArray*)getBibleTiltleArr;
@@ -48,6 +43,15 @@ typedef enum {
 -(UIColor*)getBodyTextColor;
 //获取正文字体大小
 -(UIFont*)getBodyTextFont;
+
+//获取显示view类型
+- (int)getDetailsViewType;
+
+//消息订阅相关
+-(void)subscribeMessage:(ChristMessageType)type delegate:(id)delegate;
+-(void)unSubscribeMessage:(ChristMessageType)type delegate:(id)delegate;
+-(BOOL)isSubscribeMessage:(ChristMessageType)type delegate:(id)delegate;
+-(NSMutableDictionary*)getMeesageDic:(NSDictionary*)valueDic type:(ChristMessageType)type;
 
 
 

@@ -63,6 +63,9 @@
 #define KSChapterSection            @"%d:%d"
 
 
+//NSNotificationCenter
+#define KServiceBack                @"service_back"
+
 //
 #define KViewPrevPageType           @"viewprevpagetype"
 #define KViewPageType               @"viewpagetype"
@@ -92,5 +95,9 @@
 #define KBibleVolumeNumber          (67)//实际圣经总共66卷，解析过后第一卷是空的
 #define KBibleOldVolumeNumber       (39)//旧约
 #define KBibleNewVolumeNumber       (27)//新约
+
+//资源Key值宏定义
+#define KValue                  @"value"
+#define KType                   @"type"
 
 #endif

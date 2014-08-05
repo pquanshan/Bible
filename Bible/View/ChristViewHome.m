@@ -9,12 +9,11 @@
 
 #define KPanelViewWidth (100)
 
-#import "ChristViewSearch.h"
-#import "ChristViewHome.h"
+
 #import "ChristConfig.h"
 #import "ChristUtils.h"
 #import "ChristModel.h"
-#import "ChristViewFactory.h"
+
 
 @interface ChristViewHome (){
     float preTransX;
@@ -122,7 +121,7 @@
 
 #pragma mark - ChrisScriptureDelegate
 -(void)singleTap:(id)target recognizer:(UITapGestureRecognizer *)recognizer bl:(BOOL)bl{
-    panRecognizer.enabled = bl;
+
 }
 
 -(void)longPress:(id)target recognizer:(UITapGestureRecognizer *)recognizer bl:(BOOL)bl{
@@ -161,6 +160,7 @@
         case 3://阅读
         {
             [scripture setReadModel];
+            [self setRecognizerState:YES];
         }
             break;
         case 4://复制
@@ -215,6 +215,16 @@
                 }
         }
             break;
+        case 7://分享
+        {
+            [ChristUtils ShowShareMenu:self.view dic:nil];
+//            ChristShareMenu* shareMenu = [[ChristShareMenu alloc] init];
+//            shareMenu.url = @"http://jjh.cngold.org/apps/download/";
+//            shareMenu.title = MyLocal(@"share_title");
+//            shareMenu.description = MyLocal(@"share_description1");
+//            [SysDelegate.window addSubview:shareMenu];
+        }
+            break;
         case 100:
         {
             [scripture statusChange];
@@ -232,6 +242,7 @@
         DebugLog(@"我知道了");
     }else if (buttonIndex == 1){
         DebugLog(@"分享");
+        [ChristUtils ShowShareMenu:self.view dic:nil];
     }
 }
 

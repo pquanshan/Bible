@@ -9,6 +9,7 @@
 #import "ChristUtils.h"
 #import "ChristConfig.h"
 #import "ChristModel.h"
+#import "ChristMessageContronl.h"
 
 
 @implementation ChristModel
@@ -18,13 +19,41 @@ static ChristModel* _sharedModel = nil;
 @synthesize notesData = _notesData;
 @synthesize bibleTiltleArr = _bibleTiltleArr;
 
+@synthesize messageArray = _messageArray;
+
+//+(ChristModel*)shareModel{
+//	if (!_sharedModel) {
+//        _sharedModel = [[self alloc]init];
+//        _sharedModel.bibledata = [[ChristBibleData alloc] init];
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(serviceBack:)
+//                                                     name:KServiceBack
+//                                                   object:NULL];
+//	}
+//	return _sharedModel;
+//};
+
 +(ChristModel*)shareModel{
-	if (!_sharedModel) {
-        _sharedModel = [[self alloc]init];
-        _sharedModel.bibledata = [[ChristBibleData alloc] init];
-	}
-	return _sharedModel;
+    static ChristModel* sharedModel = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        sharedModel = [[self alloc] init];
+    });
+    return sharedModel;
 };
+
+
+-(id)init{
+    self = [super init];
+    if (self) {
+        _sharedModel.bibledata = [[ChristBibleData alloc] init];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(serviceBack:)
+                                                     name:KServiceBack
+                                                   object:NULL];
+    }
+    return self;
+}
 
 -(NSArray*)getBibleTiltleArr{
     if (_bibleTiltleArr == nil) {
@@ -74,7 +103,9 @@ static ChristModel* _sharedModel = nil;
     }
 }
 
-
+- (int)getDetailsViewType{
+    return [[SysDelegate.viewHome viewShowDetails] viewType];
+}
 
 -(UIColor*)getNavBackColor{
     UIColor* color = [UIColor grayColor];
@@ -144,6 +175,80 @@ static ChristModel* _sharedModel = nil;
     }else{
         return [UIFont fontWithName:@"Arial" size:15];
     }
+}
+
+#pragma mark - service back
+- (void)serviceBack:(NSNotification*)inNotification{
+    NSMutableDictionary* dic = [inNotification object];
+    if(dic){
+        int type = [[dic objectForKey:KType]intValue];
+        
+        for (ChristMessageContronl* message in _messageArray) {
+            if ([message messageType] == type) {
+                DebugLog(@"serviceBack type = %d", type);
+                [message sendMessage:dic];
+                return;
+            }
+        }
+        if (_messageArray == nil) {
+            _messageArray = [[NSMutableArray alloc]init];
+        }
+    }
+}
+
+-(NSMutableDictionary*)getMeesageDic:(NSDictionary*)valueDic type:(ChristMessageType)type{
+    NSMutableDictionary* dic = [[NSMutableDictionary alloc]init];
+
+    [dic setObject:[NSNumber numberWithInt:type] forKey:KType];
+    if (valueDic) {
+        [dic setObject:valueDic forKey:KValue];
+    }
+    
+    return dic;
+}
+
+-(void)subscribeMessage:(ChristMessageType)type delegate:(id)delegate{
+    if (_messageArray == nil) {
+        _messageArray = [[NSMutableArray alloc]init];
+    }
+    
+    for (ChristMessageContronl* message in _messageArray) {
+        if ([message messageType] == type) {
+            [message addDelegate:delegate];
+            return;
+        }
+    }
+    
+    ChristMessageContronl* messageControl = [[ChristMessageContronl alloc]init];
+    [messageControl setMessageType:type];
+    [messageControl addDelegate:delegate];
+    
+    [_messageArray addObject:messageControl];
+    
+}
+
+-(void)unSubscribeMessage:(ChristMessageType)type delegate:(id)delegate{
+    if (_messageArray) {
+        for (ChristMessageContronl* message in _messageArray) {
+            if ([message messageType] == type) {
+                if ([message delDelegate:delegate] == 0) {
+                }
+                return;
+            }
+        }
+    }
+}
+
+-(BOOL)isSubscribeMessage:(ChristMessageType)type delegate:(id)delegate{
+    if (_messageArray) {
+        for (ChristMessageContronl* message in _messageArray) {
+            if ([message messageType] == type && [message haveDelegate:delegate]) {
+                return YES;
+                break;
+            }
+        }
+    }
+    return NO;
 }
 
 

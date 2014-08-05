@@ -62,7 +62,7 @@
 
 //给一个view添加无效手势，以达到其他手势无法响应的目的
 + (void)disableGestures:(UIView*)view;
-+ (int)getDetailsViewType;
++ (void)ShowShareMenu:(UIView*)view dic:(NSDictionary*)dic;
 
 #pragma mark - user default
 +(void)setDataByKey:(id)object forkey:(NSString *)key;

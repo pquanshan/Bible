@@ -7,6 +7,7 @@
 //
 
 #import "ChristUtils.h"
+#import <Frontia/Frontia.h>
 
 #include <sys/socket.h> // Per msqr
 #include <sys/sysctl.h>
@@ -409,8 +410,36 @@ static ChristUtils* _shareUtils = nil;
     [view addGestureRecognizer:panRecognizer];
 }
 
-+ (int)getDetailsViewType{
-    return [[SysDelegate.viewHome viewShowDetails] viewType];
++ (void)ShowShareMenu:(UIView*)view dic:(NSDictionary*)dic{
+    FrontiaShare *share = [Frontia getShare];
+    
+    [share registerQQAppId:@"100358052" enableSSO:NO];
+    [share registerWeixinAppId:@"wx712df8473f2a1dbe"];
+    
+    //授权取消回调函数
+    FrontiaShareCancelCallback onCancel = ^(){
+        NSLog(@"OnCancel: share is cancelled");
+    };
+    
+    //授权失败回调函数
+    FrontiaShareFailureCallback onFailure = ^(int errorCode, NSString *errorMessage){
+        NSLog(@"OnFailure: %d  %@", errorCode, errorMessage);
+    };
+    
+    //授权成功回调函数
+    FrontiaMultiShareResultCallback onResult = ^(NSDictionary *respones){
+        NSLog(@"OnResult: %@", [respones description]);
+    };
+    
+    FrontiaShareContent *content=[[FrontiaShareContent alloc] init];
+    content.url = @"http://developer.baidu.com/soc/share";
+    content.title = @"社会化分享";
+    content.description = @"百度社会化分享组件封装了新浪微博、人人网、开心网、腾讯微博、QQ空间和贴吧等平台的授权及分享功能，也支持本地QQ好友分享、微信分享、邮件和短信发送等，同时提供了API接口调用及本地操作界面支持。组件集成简便，风格定制灵活，可轻松实现多平台分享功能。";
+    content.imageObj = @"http://apps.bdimg.com/developer/static/04171450/developer/images/icon/terminal_adapter.png";
+    
+    NSArray *platforms = @[FRONTIA_SOCIAL_SHARE_PLATFORM_SINAWEIBO,FRONTIA_SOCIAL_SHARE_PLATFORM_QQWEIBO,FRONTIA_SOCIAL_SHARE_PLATFORM_QQ,FRONTIA_SOCIAL_SHARE_PLATFORM_RENREN,FRONTIA_SOCIAL_SHARE_PLATFORM_KAIXIN,FRONTIA_SOCIAL_SHARE_PLATFORM_EMAIL,FRONTIA_SOCIAL_SHARE_PLATFORM_SMS];
+    
+    [share showShareMenuWithShareContent:content displayPlatforms:platforms supportedInterfaceOrientations:UIInterfaceOrientationMaskPortrait isStatusBarHidden:NO targetViewForPad:view cancelListener:onCancel failureListener:onFailure resultListener:onResult];
 }
 
 #pragma mark - user default
